@@ -18,14 +18,14 @@ namespace DotNetUtils
             return ret;
         }
 
-        public static IEnumerable<string> _TakeLast<string>(IEnumerable<string> source, int count, Func<string, bool> predicate)
+        public static IEnumerable<string> TakeLast<T>(this IEnumerable<string> source, int count, Func<string, bool> predicate) //where T : System.String
         {
             if (source == null) throw new ArgumentNullException("source");
             //return _TakeLast(source, count, predicate);
             return null;
         }
 
-        private static IEnumerable<string> _TakeLast<string>(IEnumerable<string> source, int count, Func<string, bool> predicate)
+        private static IEnumerable<string> _TakeLast<T>(IEnumerable<string> source, int count, Func<string, bool> predicate)
         {
             Debug.Assert(source != null);
 
